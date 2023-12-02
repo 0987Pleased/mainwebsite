@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0f0;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f242d;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+h1 {
+    position: relative;
+    font-size: 90px;
+    color: #fff;
+
+}
+
+p {
+    position: relative;
+    font-size: 35px;
+    color: #0ef;
+    font-weight: 600;
+}
+
+section .animate{
+    opacity: 0;
+    transition: 1s;
+}
+
+section.show-animate .animate{
+    opacity: 1;
+}
+
+.sec-1 .animate{
+    transform: translateX(-100%);
+}
+
+.sec-1.show-animate .animate{
+    transform: translateX(0);    
+}
+
+.sec-2 .animate{
+    transform: translateX(100%);
+}
+
+.sec-2.show-animate .animate{
+    transform: translateX(0);
+}
+
+.sec-2 p{
+    color: #0f0;
+}
+
+.sec-3 .animate{
+    transform: scale(.3);
+}
+
+.sec-3.show-animate .animate{
+    transform: scale(1);
+}
+
+.sec-3 p{
+    color: orangered;
+}
+
+.sec-4 .showRight-animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    transition: ease-in-out 1s;
+}
+
+.sec-4.show-animate .showRight-animate{
+    width: 0;
+}
+
+.sec-4 p{
+    color: #e0f;
+}
+
+.sec-5 .images img{
+    max-width: 400px;
+    margin: 0 30px;
+    transform: translateX(-100%);
+    transition-delay: calc(.2s * var(--i));
+}
+
+.sec-5.show-animate .images img{
+    transform: translateX(0);
+}
